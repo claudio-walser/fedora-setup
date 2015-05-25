@@ -36,3 +36,12 @@ if [ ! -d /usr/share/icons/Paper ]; then
   bash ./install-icon-theme.sh
   cd -
 fi
+
+# install alacarte for menu editing
+yum install alacarte
+
+
+# install sublime text 3
+sh ./install-sublime.sh
+
+# install TeamSpeak 3 Client
