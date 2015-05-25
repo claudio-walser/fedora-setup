@@ -10,8 +10,8 @@
 #yum update
 
 
-# install vlc player from rpm-fusion now
-#yum install vlc
+# install some main packages now
+yum install vlc gnome-tweak-tool
 
 # install paper-gtk-theme and paper-icon-theme cause they are hot
 runuser -l  $SUDO_USER -c "mkdir -p /home/${SUDO_USER}/Development/paper-gtk-theme"
@@ -21,7 +21,7 @@ if [ ! -f /home/${SUDO_USER}/Development/paper-gtk-theme/install.sh ]; then
   runuser -l  $SUDO_USER -c "git clone https://github.com/snwh/paper-gtk-theme.git /home/${SUDO_USER}/Development/paper-gtk-theme"
 fi
 
-if [ ! -f /home/${SUDO_USER}/Development/paper-icon-theme/install.sh ]; then
+if [ ! -f /home/${SUDO_USER}/Development/paper-icon-theme/install-icon-theme.sh ]; then
   runuser -l  $SUDO_USER -c "git clone https://github.com/snwh/paper-icon-theme.git /home/${SUDO_USER}/Development/paper-icon-theme"
 fi
 
