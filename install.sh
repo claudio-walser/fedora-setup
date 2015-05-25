@@ -11,7 +11,7 @@ yum update
 
 
 # install some main packages now
-yum install vlc gnome-tweak-tool libreoffice conky screenfetch
+yum install vlc gnome-tweak-tool libreoffice conky screenfetch alacarte
 
 # install paper-gtk-theme and paper-icon-theme cause they are hot
 runuser -l  $SUDO_USER -c "mkdir -p /home/${SUDO_USER}/Development/paper-gtk-theme"
@@ -37,10 +37,6 @@ if [ ! -d /usr/share/icons/Paper ]; then
   cd -
 fi
 
-# install alacarte for menu editing
-yum install alacarte
-
-
 # install sublime text 3
 sh ./install-sublime.sh
 
@@ -51,3 +47,4 @@ if [ ! -d /home/${SUDO_USER}/Development/reverse-engineering/fmk ]; then
   runuser -l  $SUDO_USER -c "tar -xvzf /home/${SUDO_USER}/Development/reverse-engineering/fmk_099.tar.gz -C /home/${SUDO_USER}/Development/reverse-engineering/"
   rm -rf /home/${SUDO_USER}/Development/reverse-engineering/fmk_099.tar.gz
 fi
+
