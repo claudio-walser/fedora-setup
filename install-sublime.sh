@@ -15,8 +15,8 @@ else
 /opt/sublime_text_3/sublime_text \$@ > /dev/null 2>&1 &
 fi"
 
-if [ -d /opt/sublime_text_3/sublime_text ]; then
-  echo 'Sublime is already installed in /opt/. Remove it first"
+if [ -d /opt/sublime_text_3 ]; then
+  echo 'Sublime is already installed in /opt/. Remove it first, then call this script again'
   exit 0
 fi
 
