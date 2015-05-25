@@ -11,7 +11,7 @@ yum update
 
 
 # install some main packages now
-yum install vlc gnome-tweak-tool
+yum install vlc gnome-tweak-tool libreoffice conky screenfetch
 
 # install paper-gtk-theme and paper-icon-theme cause they are hot
 runuser -l  $SUDO_USER -c "mkdir -p /home/${SUDO_USER}/Development/paper-gtk-theme"
@@ -44,4 +44,10 @@ yum install alacarte
 # install sublime text 3
 sh ./install-sublime.sh
 
-# install TeamSpeak 3 Client
+# some other dev tools
+if [ ! -d /home/${SUDO_USER}/Development/reverse-engineering/fmk ]; then
+  runuser -l  $SUDO_USER -c "mkdir -p /home/${SUDO_USER}/Development/reverse-engineering"
+  runuser -l  $SUDO_USER -c "wget -P /home/${SUDO_USER}/Development/reverse-engineering/ https://firmware-mod-kit.googlecode.com/files/fmk_099.tar.gz"
+  runuser -l  $SUDO_USER -c "tar -xvzf /home/${SUDO_USER}/Development/reverse-engineering/fmk_099.tar.gz -C /home/${SUDO_USER}/Development/reverse-engineering/"
+  rm -rf /home/${SUDO_USER}/Development/reverse-engineering/fmk_099.tar.gz
+fi
