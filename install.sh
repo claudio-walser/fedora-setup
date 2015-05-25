@@ -25,10 +25,14 @@ if [ ! -f /home/${SUDO_USER}/Development/paper-icon-theme/install.sh ]; then
   runuser -l  $SUDO_USER -c "git clone https://github.com/snwh/paper-icon-theme.git /home/${SUDO_USER}/Development/paper-icon-theme"
 fi
 
-cd /home/${SUDO_USER}/Development/paper-gtk-theme/
-bash ./install.sh
-cd -
+if [ ! -d /usr/share/themes/Paper ]; then
+  cd /home/${SUDO_USER}/Development/paper-gtk-theme/
+  bash ./install.sh
+  cd -
+fi
 
-cd /home/${SUDO_USER}/Development/paper-icon-theme/
-bash ./install-icon-theme.sh
-cd -
+if [ ! -d /usr/share/icons/Paper ]; then
+  cd /home/${SUDO_USER}/Development/paper-icon-theme/
+  bash ./install-icon-theme.sh
+  cd -
+fi
