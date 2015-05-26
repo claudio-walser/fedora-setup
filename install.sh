@@ -1,19 +1,20 @@
 #!/bin/bash
 
 # install rpm-fusion free repository
-yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+dnf install --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 
 # install rmp-fusion non-free repository
-yum localinstall --nogpgcheck http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm 
+dnf install --nogpgcheck http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm 
 
-# update 
-yum update
+# update and upgrade
+dnf update
+dnf upgrade
 
 # tweak nautilus 3.6 to get new file back into context menu
 runuser -l  $SUDO_USER -c "touch /home/${SUDO_USER}/Vorlagen/Neue\ Datei.txt"
 
 # install some main packages now
-yum install gcc kernel-devel kernel-headers screen vlc gnome-tweak-tool libreoffice conky screenfetch alacarte pidgin amule \
+dnf install gcc kernel-devel kernel-headers screen vlc gnome-tweak-tool libreoffice conky screenfetch alacarte pidgin amule \
             gstreamer-plugins-ugly gstreamer-plugin-crystalhd gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-vaapi gstreamer1-plugins-good gstreamer1-plugins-bad-free 
 
 # install paper-gtk-theme and paper-icon-theme cause they are hot
@@ -51,7 +52,7 @@ if [ ! -d /home/${SUDO_USER}/Development/reverse-engineering/fmk ]; then
   rm -rf /home/${SUDO_USER}/Development/reverse-engineering/fmk_099.tar.gz
 fi
 
-yum install nmap
+dnf install nmap
 
 # set gnome window controls to the left, cause I like it more
 #runuser -l  $SUDO_USER -c "gsettings set org.gnome.desktop.wm.preferences button-layout 'close,maximize,minimize:'"
