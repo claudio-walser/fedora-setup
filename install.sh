@@ -42,7 +42,10 @@ if [ ! -d /usr/share/icons/Paper ]; then
 fi
 
 # install sublime text 3
-sh ./install-sublime.sh
+bash ./install-sublime.sh
+
+# install teamspeak 3
+bash ./install-teamspeak.sh
 
 # some other dev tools
 if [ ! -d /home/${SUDO_USER}/Development/reverse-engineering/fmk ]; then
