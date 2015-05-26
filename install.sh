@@ -9,6 +9,9 @@ yum localinstall --nogpgcheck http://download1.rpmfusion.org/nonfree/fedora/rpmf
 # update 
 yum update
 
+# tweak nautilus 3.6 to get new file back into context menu
+runuser -l  $SUDO_USER -c "touch /home/${SUDO_USER}/Vorlagen/Neue\ Datei.txt"
+
 # install some main packages now
 yum install vlc gnome-tweak-tool libreoffice conky screenfetch alacarte
 
