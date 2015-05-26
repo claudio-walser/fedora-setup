@@ -13,7 +13,8 @@ yum update
 runuser -l  $SUDO_USER -c "touch /home/${SUDO_USER}/Vorlagen/Neue\ Datei.txt"
 
 # install some main packages now
-yum install vlc gnome-tweak-tool libreoffice conky screenfetch alacarte pidgin gstreamer-plugins-ugly gstreamer-plugin-crystalhd gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-vaapi gstreamer1-plugins-good gstreamer1-plugins-bad-free 
+yum install screen vlc gnome-tweak-tool libreoffice conky screenfetch alacarte pidgin \
+            gstreamer-plugins-ugly gstreamer-plugin-crystalhd gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-vaapi gstreamer1-plugins-good gstreamer1-plugins-bad-free 
 
 # install paper-gtk-theme and paper-icon-theme cause they are hot
 runuser -l  $SUDO_USER -c "mkdir -p /home/${SUDO_USER}/Development/paper-gtk-theme"
