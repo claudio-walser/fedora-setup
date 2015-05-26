@@ -14,7 +14,7 @@ dnf upgrade
 runuser -l  $SUDO_USER -c "touch /home/${SUDO_USER}/Vorlagen/Neue\ Datei.txt"
 
 # install some main packages now
-dnf install gcc nano kernel-devel kernel-headers screen vlc gnome-tweak-tool libreoffice conky screenfetch alacarte pidgin amule \
+dnf install gcc nano fuse-sshfs tomboy kernel-devel kernel-headers screen vlc gnome-tweak-tool libreoffice conky screenfetch alacarte pidgin amule \
             gstreamer-plugins-ugly gstreamer-plugin-crystalhd gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-vaapi gstreamer1-plugins-good gstreamer1-plugins-bad-free 
 
 # install paper-gtk-theme and paper-icon-theme cause they are hot
