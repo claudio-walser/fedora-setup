@@ -13,6 +13,9 @@ dnf upgrade
 # tweak nautilus 3.6 to get new file back into context menu
 runuser -l  $SUDO_USER -c "touch /home/${SUDO_USER}/Vorlagen/Neue\ Datei.txt"
 
+# install jitsi
+dnf install --nogpgcheck https://download.jitsi.org/jitsi/rpm/jitsi-2.8-5426.x86_64.rpm
+
 # install some main packages now
 dnf install gcc nano fuse-sshfs tomboy keepass kernel-devel kernel-headers screen vlc gnome-tweak-tool libreoffice conky screenfetch alacarte pidgin amule \
             gstreamer-plugins-ugly gstreamer-plugin-crystalhd gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-vaapi gstreamer1-plugins-good gstreamer1-plugins-bad-free 
