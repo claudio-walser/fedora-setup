@@ -47,3 +47,5 @@ if [ ! -d /home/${SUDO_USER}/Development/reverse-engineering/fmk ]; then
   rm -rf /home/${SUDO_USER}/Development/reverse-engineering/fmk_099.tar.gz
 fi
 
+# set gnome window controls to the left, cause I like it more
+#runuser -l  $SUDO_USER -c "gsettings set org.gnome.desktop.wm.preferences button-layout 'close,maximize,minimize:'"
