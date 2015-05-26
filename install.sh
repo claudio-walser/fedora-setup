@@ -9,7 +9,6 @@ yum localinstall --nogpgcheck http://download1.rpmfusion.org/nonfree/fedora/rpmf
 # update 
 yum update
 
-
 # install some main packages now
 yum install vlc gnome-tweak-tool libreoffice conky screenfetch alacarte
 
