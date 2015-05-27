@@ -17,7 +17,7 @@ runuser -l  $SUDO_USER -c "touch /home/${SUDO_USER}/Vorlagen/Neue\ Datei.txt"
 dnf install --nogpgcheck https://download.jitsi.org/jitsi/rpm/jitsi-2.8-5426.x86_64.rpm
 
 # install some main packages now
-dnf install gcc nano fuse-sshfs tomboy keepass deja-dup kernel-devel kernel-headers screen vlc gnome-tweak-tool libreoffice conky screenfetch alacarte pidgin amule \
+dnf install gcc nano fuse-sshfs tomboy keepass deja-dup kernel-devel kernel-headers screen vlc gnome-tweak-tool libreoffice conky screenfetch alacarte pidgin amule gimp \
             gstreamer-plugins-ugly gstreamer-plugin-crystalhd gstreamer1-libav gstreamer1-plugins-bad-freeworld gstreamer1-vaapi gstreamer1-plugins-good gstreamer1-plugins-bad-free 
 
 # install paper-gtk-theme and paper-icon-theme cause they are hot
